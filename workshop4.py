@@ -11,5 +11,14 @@
 # my eyes are {my_eyes}, my teeth are {my_teeth}
 # and my hair is {my_hair}""")
 
-age = input("How old are you? ")
-print(f"you age: {age}*3!")
+# age = input("How old are you? ")
+# print(f"you age: {age}*3!")
+
+# a = 10e5
+# print(a)
+
+A = "Macbook pro"
+print(A)
+
+
+
