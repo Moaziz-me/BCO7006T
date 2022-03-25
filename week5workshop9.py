@@ -46,7 +46,7 @@
 # parent and child class
 
 # class Person:
-#     def __inti__(self, fname, lname):
+#     def __init__(self, fname, lname):
 #         self.firstname = fname
 #         self.lastname = lname
 #     def printname(self):
@@ -55,5 +55,38 @@
 # x = Person("Ahmad", "Mahmood")
 # x.printname()
 
+# class Student(Person):
+#     pass
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+x = Person("Ahmad", "Mahmood")
+x.printname()
+
+# class Student(Person):
+#     pass
+
 class Student(Person):
-    pass
+    def __init__(self, fname, lname, year):
+        super().__init__(fname, lname)
+        self.graduationyear = 2019
+
+y = Student("Mike", "Olsen", 2019)
+print(y.graduationyear)
+print(y.lastname)
+
+class Student(Person):
+    def __init__(self, fname, lname, year):
+        super().__init__(fname, lname)
+        self.graduateyear = year
+    def Welcome(self):
+        print("Welcome", self.firstname, self.lastname, "The graduation year is", self.graduateyear)
+
+
+x = Student("Ahmad", "Mahmood", 2022)
+x.Welcome()
